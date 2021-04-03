@@ -1,0 +1,52 @@
+.featuresSlider {
+  margin-top: 45px;
+  position: relative;
+
+}
+
+.featuresSliderArrow {
+  position: absolute;
+  display: flex;
+  top: 40%;
+  border-radius: 50%;
+  border: none;
+  width: 38px;
+  height: 38px;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.05);
+  outline: transparent;
+  cursor: pointer;
+}
+
+.featuresSliderArrow svg {
+  margin: auto;
+  fill: #434343;
+}
+
+.featuresSliderArrow:hover,
+.featuresSliderArrow:active {
+  background: rgba(75, 77, 98, 0.72);
+}
+
+.featuresSliderArrow:hover svg,
+.featuresSliderArrow:active svg {
+  fill: #ffffff;
+}
+
+.featuresSliderPrev {
+  left: 0;
+}
+
+.featuresSliderPrev svg {
+  transform: rotate(180deg);
+}
+
+.featuresSliderNext {
+  right: 0;
+}
+
+@media (min-width: 1024px) {
+  .featuresSliderArrow {
+    display: none;
+  }
+}

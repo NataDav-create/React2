@@ -1,0 +1,15 @@
+.featuresSliderItems {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 576px) {
+  .featuresSliderItems {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .featuresSliderItem:nth-child(2) {
+    display: block;
+  }
+}

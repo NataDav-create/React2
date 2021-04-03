@@ -1,42 +1,3 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -224,9 +185,9 @@ template,
   font-family: 'Roboto';
   src: local("Roboto"),
     local("Roboto-Regular"),
-    url("../src/fonts/Roboto.woff2") format("woff2"),
-    url("../src/fonts/Roboto.woff") format("woff"),
-    url("../src/fonts/Roboto.ttf") format("truetype");
+    url("../../src/fonts/Roboto.woff2") format("woff2"),
+    url("../../src/fonts/Roboto.woff") format("woff"),
+    url("../../src/fonts/Roboto.ttf") format("truetype");
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -234,7 +195,7 @@ template,
 
 @font-face {
   font-family: 'Roboto';
-  src: local("Roboto Medium"), local("Roboto-Medium"), url("../src/fonts/Robotomedium.woff2") format("woff2"), url("../src/fonts/Robotomedium.woff") format("woff"), url("../src/fonts/Robotomedium.ttf") format("truetype");
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../../src/fonts/Robotomedium.woff2") format("woff2"), url("../../src/fonts/Robotomedium.woff") format("woff"), url("../../src/fonts/Robotomedium.ttf") format("truetype");
   font-display: swap;
   font-weight: 500;
   font-style: normal;
@@ -242,7 +203,7 @@ template,
 
 @font-face {
   font-family: 'Roboto';
-  src: local("Roboto Black"), local("Roboto-Black"), url("../src/fonts/Robotoblack.woff2") format("woff2"), url("../src/fonts/Robotoblack.woff") format("woff"), url("../src/fonts/Robotoblack.ttf") format("truetype");
+  src: local("Roboto Black"), local("Roboto-Black"), url("../../src/fonts/Robotoblack.woff2") format("woff2"), url("../../src/fonts/Robotoblack.woff") format("woff"), url("../../src/fonts/Robotoblack.ttf") format("truetype");
   font-display: swap;
   font-weight: 900;
   font-style: normal;
@@ -319,5 +280,160 @@ img {
 @media (min-width: 576px) {
   .btn span {
     font-size: 18px;
+  }
+}
+
+main {
+  position: relative;
+  background: #E6E3DE url(../images/main-bg-600.webp) no-repeat top left;
+  background-size: cover;
+  z-index: 1;
+  padding: 110px 0 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 50, 75, 0.85);
+  z-index: -1;
+}
+
+@media (min-width: 576px) {
+  main {
+    background: #E6E3DE url(../images/main-bg-1024.webp) no-repeat top left;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    background: #E6E3DE url(../images/main-bg-1600.webp) no-repeat top left;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.mainHead {
+  margin: 0;
+  font-weight: 900;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.mainSmall {
+  margin: 25px 0 0;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.mainBtn {
+  padding: 9px 29px;
+  margin: 60px auto 0;
+}
+
+.no-webp main {
+  background: #E6E3DE url(../images/main-bg-600.jpg) no-repeat top left;
+  background-size: cover;
+}
+
+@media (min-width: 576px) {
+  .no-webp main {
+    background: #E6E3DE url(../images/main-bg-1024.jpg) no-repeat top left;
+  }
+}
+
+@media (min-width: 992px) {
+  .no-webp main {
+    background: #E6E3DE url(../images/main-bg-1600.jpg) no-repeat top left;
+  }
+}
+
+@media (min-width: 576px) {
+  .mainHead {
+    font-size: 30px;
+    padding: 0 80px;
+  }
+
+  .mainSmall {
+    font-size: 16px;
+    padding: 0 60px;
+  }
+
+  .mainBtn {
+    padding: 11px 39px;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 130px 0 80px;
+  }
+
+  .mainHead {
+    font-size: 36px;
+    padding: 0 90px;
+  }
+
+  .mainSmall {
+    font-size: 16px;
+    padding: 0 80px;
+    max-width: 750px;
+    margin: 27px auto 0;
+  }
+
+  .mainBtn {
+    padding: 11px 39px;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    padding: 160px 0 80px;
+  }
+
+  .mainHead {
+    font-size: 40px;
+  }
+
+  .mainSmall {
+    font-size: 18px;
+  }
+
+  .mainBtn {
+    padding: 12px 49px;
+  }
+
+  .main-btn span {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding: 222px 0 146px;
+  }
+
+  .mainHead {
+    font-size: 52px;
+  }
+
+  .mainSmall {
+    font-size: 22px;
+    line-height: 31px;
   }
 }

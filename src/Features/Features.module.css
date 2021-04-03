@@ -1,42 +1,3 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -224,9 +185,9 @@ template,
   font-family: 'Roboto';
   src: local("Roboto"),
     local("Roboto-Regular"),
-    url("../src/fonts/Roboto.woff2") format("woff2"),
-    url("../src/fonts/Roboto.woff") format("woff"),
-    url("../src/fonts/Roboto.ttf") format("truetype");
+    url("../../src/fonts/Roboto.woff2") format("woff2"),
+    url("../../src/fonts/Roboto.woff") format("woff"),
+    url("../../src/fonts/Roboto.ttf") format("truetype");
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -234,7 +195,7 @@ template,
 
 @font-face {
   font-family: 'Roboto';
-  src: local("Roboto Medium"), local("Roboto-Medium"), url("../src/fonts/Robotomedium.woff2") format("woff2"), url("../src/fonts/Robotomedium.woff") format("woff"), url("../src/fonts/Robotomedium.ttf") format("truetype");
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../../src/fonts/Robotomedium.woff2") format("woff2"), url("../../src/fonts/Robotomedium.woff") format("woff"), url("../../src/fonts/Robotomedium.ttf") format("truetype");
   font-display: swap;
   font-weight: 500;
   font-style: normal;
@@ -242,7 +203,7 @@ template,
 
 @font-face {
   font-family: 'Roboto';
-  src: local("Roboto Black"), local("Roboto-Black"), url("../src/fonts/Robotoblack.woff2") format("woff2"), url("../src/fonts/Robotoblack.woff") format("woff"), url("../src/fonts/Robotoblack.ttf") format("truetype");
+  src: local("Roboto Black"), local("Roboto-Black"), url("../../src/fonts/Robotoblack.woff2") format("woff2"), url("../../src/fonts/Robotoblack.woff") format("woff"), url("../../src/fonts/Robotoblack.ttf") format("truetype");
   font-display: swap;
   font-weight: 900;
   font-style: normal;
@@ -293,31 +254,131 @@ img {
   }
 }
 
-.btn {
-  cursor: pointer;
-  margin: 0 auto;
-  background: #15A9CB;
-  box-shadow: 0 4px 25px rgba(21, 169, 203, 0.3);
-  border-radius: 50px;
-  outline: none;
-  border: transparent;
+.features {
+  background: #F9F9F9;
+  text-align: center;
+  color: #383A4C;
 }
 
-.btn span {
-  font-family: Roboto, sans-serif;
+
+
+.featuresWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 30px 0 60px;
+}
+
+.featuresHead {
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+  /* font-size: 35px; */
+}
+
+.featuresSubhead {
+  position: relative;
+  margin: 15px auto 0;
   font-weight: 500;
   font-size: 16px;
-  color: #FFFFFF;
+  text-align: center;
 }
 
-.btn:hover,
-.btn:active {
-  background-color: #ea5634;
-  box-shadow: 0 4px 25px rgba(234, 86, 52, 0.3);
+.featuresSubhead:before {
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: #383A4C;
+}
+
+.featuresSubhead:after {
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: #383A4C;
+}
+
+.featuresDescription {
+  margin-top: 25px;
+  font-weight: 400;
+  line-height: 17px;
+  font-size: 12px;
+  text-align: center;
 }
 
 @media (min-width: 576px) {
-  .btn span {
+  .featuresHead {
+    font-size: 28px;
+  }
+
+  .featuresSubhead {
+    font-size: 20px;
+  }
+
+  .featuresSubhead:before {
+    height: 2px;
+  }
+
+  .featuresSubhead:after {
+    height: 2px;
+  }
+
+  .featuresDescription {
+    line-height: 20px;
+    font-size: 14px;
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .featuresHead {
+    font-size: 30px;
+    margin: 0 auto;
+  }
+
+  .featuresSubhead {
+    font-size: 20px;
+  }
+
+  .featuresDescription {
+    line-height: 24px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featuresWrapper {
+    padding-top: 60px;
+  }
+
+  .featuresHead {
+    font-size: 32px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .featuresWrapper {
+    padding: 70px 0;
+  }
+
+  .featuresHead {
+    font-size: 35px;
+  }
+
+  .featuresSubhead {
+    font-size: 22px;
+  }
+
+  .featuresDescription {
+    line-height: 25px;
     font-size: 18px;
   }
 }

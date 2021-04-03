@@ -1,0 +1,575 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template,
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto"),
+    local("Roboto-Regular"),
+    url("../../src/fonts/Roboto.woff2") format("woff2"),
+    url("../../src/fonts/Roboto.woff") format("woff"),
+    url("../../src/fonts/Roboto.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../../src/fonts/Robotomedium.woff2") format("woff2"), url("../../src/fonts/Robotomedium.woff") format("woff"), url("../../src/fonts/Robotomedium.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto Black"), local("Roboto-Black"), url("../../src/fonts/Robotoblack.woff2") format("woff2"), url("../../src/fonts/Robotoblack.woff") format("woff"), url("../../src/fonts/Robotoblack.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: Roboto, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+  height: 100%;
+}
+
+@media (min-width: 576px) {
+  .wrapper {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 1140px;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  margin: 0 auto;
+  background: #15A9CB;
+  box-shadow: 0 4px 25px rgba(21, 169, 203, 0.3);
+  border-radius: 50px;
+  outline: none;
+  border: transparent;
+}
+
+.btn span {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #ea5634;
+  box-shadow: 0 4px 25px rgba(234, 86, 52, 0.3);
+}
+
+@media (min-width: 576px) {
+  .btn span {
+    font-size: 18px;
+  }
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+  height: 100%;
+}
+
+.contact {
+  position: relative;
+  background: #E6E3DE url(../images/contact-bg-600.webp) no-repeat center;
+  background-size: cover;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contact:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 50, 75, 0.85);
+  z-index: -1;
+}
+
+@media (min-width: 576px) {
+  .contact {
+    background: #E6E3DE url(../images/contact-bg-1024.webp) no-repeat top left;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact {
+    background: #E6E3DE url(../images/contact-bg-1600.webp) no-repeat top left;
+    background-size: cover;
+  }
+}
+
+.contactWrapper {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.contactTitle {
+  font-weight: 900;
+  font-size: 20px;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.contactDescription {
+  margin-top: 14px;
+  font-weight: 500;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.contactForm input {
+  width: 290px;
+  height: 30px;
+  border: 1px solid #FFFFFF;
+  border-radius: 50px;
+  background-color: transparent;
+  padding: 16px 18px;
+  margin: 14px auto 0;
+  color: #ffffff;
+  outline: transparent;
+}
+
+.contactForm ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  text-overflow: ellipsis;
+  text-indent: 0;
+  -webkit-transition: text-indent 0.3s ease;
+  transition: text-indent 0.3s ease;
+}
+
+.contactForm ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  text-overflow: ellipsis;
+  text-indent: 0;
+  -moz-transition: text-indent 0.3s ease;
+  transition: text-indent 0.3s ease;
+}
+
+.contactForm :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  text-overflow: ellipsis;
+  text-indent: 0;
+  -ms-transition: text-indent 0.3s ease;
+  transition: text-indent 0.3s ease;
+}
+
+.contactForm :focus::-webkit-input-placeholder {
+  text-indent: 500px;
+  -webkit-transition: text-indent 0.3s ease;
+  transition: text-indent 0.3s ease;
+}
+
+.contactForm :focus::-moz-placeholder {
+  text-indent: 500px;
+  -moz-transition: text-indent 0.3s ease;
+  transition: text-indent 0.3s ease;
+}
+
+.contactForm :focus:-ms-input-placeholder {
+  text-indent: 500px;
+  -ms-transition: text-indent 0.3s ease;
+  transition: text-indent 0.3s ease;
+}
+
+.contactBtn {
+  margin-top: 45px;
+  padding: 10px 26px;
+}
+
+.contactBtn span {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.contactPersonal {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.contactPersonal a {
+  color: #4A76A8;
+}
+
+.no-webp .contact,
+.no-js .contact {
+  background: #E6E3DE url(../images/contact-bg-600.jpg) no-repeat top left;
+}
+
+@media (min-width: 576px) {
+
+  .no-webp .contact,
+  .no-js .contact {
+    background: #E6E3DE url(../images/contact-bg-1024.jpg) no-repeat top left;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .no-webp .contact,
+  .no-js .contact {
+    background: #E6E3DE url(../images/contact-bg-1600.jpg) no-repeat top left;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 576px) {
+  .contactTitle {
+    font-size: 28px;
+  }
+
+  .contactDescription {
+    font-size: 14px;
+  }
+
+  .contactForm input {
+    width: 377px;
+    height: 39px;
+  }
+
+  .contactBtn {
+    padding: 11px 38px;
+  }
+
+  .contactPersonal {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contactTitle {
+    font-size: 30px;
+  }
+
+  .contactDescription {
+    font-size: 16px;
+  }
+
+  .contactForm ::-webkit-input-placeholder {
+    font-size: 18px;
+  }
+
+  .contactForm ::-moz-placeholder {
+    font-size: 18px;
+  }
+
+  .contactForm :-ms-input-placeholder {
+    font-size: 18px;
+  }
+
+  .contactPersonal {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) {
+  .contactWrapper {
+    padding: 60px 0;
+  }
+
+  .contactDescription {
+    font-size: 20px;
+  }
+
+  .contactForm ::-webkit-input-placeholder {
+    font-size: 20px;
+  }
+
+  .contactForm ::-moz-placeholder {
+    font-size: 20px;
+  }
+
+  .contactForm :-ms-input-placeholder {
+    font-size: 20px;
+  }
+
+  .contactBtn {
+    padding: 13px 38px;
+  }
+
+  .contactBtn span {
+    font-size: 20px;
+  }
+
+  .contact-personal {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contactWrapper {
+    padding: 70px 0;
+  }
+
+  .contactTitle {
+    font-size: 35px;
+  }
+
+  .contactDescription {
+    font-size: 22px;
+  }
+
+  .contactForm ::-webkit-input-placeholder {
+    font-size: 22px;
+  }
+
+  .contactForm ::-moz-placeholder {
+    font-size: 22px;
+  }
+
+  .contactForm :-ms-input-placeholder {
+    font-size: 22px;
+  }
+
+  .contactForm input {
+    width: 423px;
+    height: 44px;
+  }
+
+  .contactFormPersonal {
+    font-size: 20px;
+  }
+}
